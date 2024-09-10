@@ -1,0 +1,280 @@
+/** {*/
+    /*font-family: monospace;*/
+/*}*/
+
+p {
+    font-family: monospace;
+}
+h1 {
+    font-family: monospace;
+    text-align: center;
+}
+
+h2 {
+    font-family: monospace;
+    text-align: center;
+}
+
+h3 {
+    margin: 20px 0 0 0;
+    font-family: monospace;
+    text-align: left;
+}
+
+h4 {
+    margin: 0 0 0 0;
+    font-family: monospace;
+    text-align: left;
+}
+
+button {
+    font-family: monospace;
+    border-radius: 3px;
+    color: white;
+    background-color: black;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+hr {
+    width: 90%;
+}
+
+#div_update_buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#img_grid_option {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px 0;
+}
+
+#img_grid_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 10px;
+    justify-items: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.grid_figure {
+    width: 190px;
+    height: 210px;
+    object-fit: contain;
+    resize: none;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+/* Add the title below the image */
+.grid_figure p {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.grid_figure img:hover {
+    border-style: solid;
+}
+
+.grid_figure img {
+    width: 90%;
+    height: 70%;
+    object-fit: contain;
+    object-position: center;
+    cursor: pointer;
+    border: 2px dotted black; /* Initial border color */
+    border-radius: 5px;
+}
+
+.et_options_h4 {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* let img_edit_container is the center of the screen */
+#img_edit_container {
+    position: fixed;
+    align-items: center;
+    height: 90%;
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    display: none;
+}
+
+.btn_close {
+    position: absolute; /* Position the close button absolutely within the .container */
+    top: 0;
+    right: 10px;
+    /*padding: 5px 10px;*/
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+}
+
+.btn_close:active {
+    background-color: black;
+    color: white;
+}
+
+.btn_delete {
+    bottom: 0;
+    background-color: black;
+    color: white;
+    right: 0px;
+    cursor: pointer;
+    align-self: center;
+}
+
+.btn_delete:hover {
+    background-color: darkred;
+    color: yellow;
+}
+
+.tab_button_container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.tablinks {
+    color: black;
+    background: white;
+    border-style: dotted;
+}
+
+.tab_container {
+    display: none;
+    flex-direction: column;
+}
+
+#tab_ggplot {
+    display: flex;
+}
+
+
+.tab_active {
+    border-style: solid;
+}
+
+#edit_tools {
+    height: 100%;
+    background-color: white;
+    display: flex;
+    overflow: auto;
+    /* justify-content: center; */
+    /* align-items: center; */
+    flex: 1;
+    flex-direction: column;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 0 20px;
+    gap: 0px;
+}
+
+#edit_tools h2 {
+    width: 90%;
+}
+
+#edit_tools textarea {
+    width: 100%;
+}
+
+#edit_tools p {
+    margin: 5px 0;
+}
+
+button {
+    align-self: flex-end;
+    margin: 5px 0px;
+}
+
+#btn_add_to_code {
+    align-self: center;
+}
+
+
+#img_canvas {
+    width: 100%;
+    height: 100%;
+    margin-right: 4px;
+    object-fit: contain;
+    border: 3px solid black;
+    border-radius: 5px;
+    resize: none;
+    overflow: hidden;
+    line-height: 0;
+    background-color: white;
+    /* cursor: pointer; */
+    flex: 1.25;
+
+    display: flex; /* Helps center the image if using object-fit: contain; */
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#img_canvas img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center;
+    cursor: default;
+}
+
+#mask {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    display: none;
+}
+
+#error_message {
+    color: red;
+    font-weight: bold;
+}
+
+
+.et_options_h4 {
+    display: flex; /* Arrange elements side by side */
+}
+
+.fixed-text {
+    white-space: nowrap; /* Prevent fixed text from wrapping */
+    margin-right: 5px;   /* Add some spacing between fixed text and textarea */
+}
+
+#code {
+    flex: 1;            /* Make the textarea expand to fill available space */
+    resize: vertical;   /* Allow resizing only vertically */
+    width: 90%;
+}
+
+#editor { 
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
